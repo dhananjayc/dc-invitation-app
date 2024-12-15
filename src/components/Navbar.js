@@ -105,7 +105,7 @@ const Navbar = () => {
             },
           }}
         >
-          <Link to="location" smooth={true} duration={500}>Venue & Location</Link>
+          <Link to="location" smooth={true} duration={500}>Venue</Link>
         </Button>
       </Toolbar>
     </AppBar>
