@@ -115,6 +115,10 @@ const CarouselGallery = () => {
             maxWidth: '80%',
             maxHeight: '80%',
             overflow: 'auto',
+            width: {
+              xs: '100%',  // Full width on small screens (mobile)
+              sm: '80%',   // 80% width on larger screens
+            }
           }}
         >
           <IconButton
