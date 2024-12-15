@@ -10,6 +10,8 @@ const OurStory = () => {
       </Typography>
       <Typography variant="body1" paragraph>
         Join us in celebrating our love story, which began as a chance encounter and blossomed into a beautiful journey.
+      </Typography>
+      <Typography variant="body1" paragraph>
         We can’t wait to start the next chapter with all of you.
       </Typography>
     </section>

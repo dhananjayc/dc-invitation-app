@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 
 const EventDetails = () => {
   return (
-    <section id="event-details" style={{ padding: '50px 0' }}>
+    <section id="event-details" style={{ padding: '50px 0' }} className="event-details">
       <Box textAlign="center">
         <Typography variant="h4" gutterBottom>
           Event Details
