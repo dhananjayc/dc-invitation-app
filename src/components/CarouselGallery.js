@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Grid, Box, IconButton, Modal } from '@mui/material';
+import { Box, IconButton, Modal } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CloseIcon from '@mui/icons-material/Close';
+
 
 const galleryMedia = [
   { type: 'image', src: '/assets/Invite5.png' },
@@ -19,10 +20,10 @@ const galleryMedia = [
   { type: 'video', src: '/assets/InviteVideo4.mp4' },
 ];
 
-const itemsPerPage = 3;  // Number of media items to display at once
+const itemsPerPage = 3;  // Number of items to display at once
 
 const CarouselGallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);  // Track the starting index of visible items
+  const [currentIndex, setCurrentIndex] = useState(0);  // Starting index of visible items
   const [open, setOpen] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState(null);
 
@@ -62,29 +63,37 @@ const CarouselGallery = () => {
           <ArrowBackIosIcon />
         </IconButton>
 
-        {/* Display the visible media items */}
-        <Grid container spacing={2}>
+        {/* Media items in horizontal scrollable layout */}
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            overflowX: 'hidden', // Hide overflow for smooth scrolling
+            width: '80%',        // Width of the visible media area
+          }}
+        >
           {visibleItems.map((media, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Box key={index} sx={{ flex: '1 0 30%', margin: '0 10px' }}>  {/* Adjusting item width */}
               {media.type === 'image' ? (
                 <img
                   src={media.src}
                   alt={`Media ${index + 1}`}
-                  style={{ width: '100%', cursor: 'pointer' }}
+                  style={{ width: '100%', cursor: 'pointer', borderRadius: '8px' }}
                   onClick={() => handleOpen(media)}
                 />
               ) : (
                 <video
                   src={media.src}
-                  style={{ width: '100%', cursor: 'pointer' }}
+                  style={{ width: '100%', cursor: 'pointer', borderRadius: '8px' }}
                   onClick={() => handleOpen(media)}
                   controls
                   // controls={false}  // Show only video thumbnail in grid
                 />
               )}
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         {/* Next Arrow */}
         <IconButton onClick={nextItems} sx={{ marginLeft: 2 }}>
