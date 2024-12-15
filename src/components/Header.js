@@ -4,11 +4,11 @@ import { Box, Typography, Button } from '@mui/material';
 const Header = () => {
   return (
     <header id="home" style={{ backgroundColor: '#f5f5f5', padding: '50px 0' }}>
-      <Box textAlign="center">
+      <Box textAlign="center"  style={{ padding: '0 4px' }}>
         <Typography variant="body1" gutterBottom>
           You're Invited to the Wedding of 
         </Typography>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h2" gutterBottom>
           Sanket & Priyanka
         </Typography>
         <Typography variant="h5" gutterBottom>

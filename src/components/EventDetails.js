@@ -8,11 +8,21 @@ const EventDetails = () => {
         <Typography variant="h4" gutterBottom>
           Event Details
         </Typography>
-        <Typography variant="body1" paragraph>
-          Ceremony begins at 5:56 PM, followed by a reception.
-        </Typography>
-        <Typography variant="body1">
+        {/* <Typography variant="body1">
           Location: Matoshree Lawns, Mohitewadi, Khed, Pune
+        </Typography> */}
+        <Typography variant="body4">
+          <b>दंडवत - </b>19 डिसेंबर 2024 (सकाळी 9 वा. चिंचोशी)<br/> 
+        </Typography>
+        <Typography variant="body4">
+         <b>हळद - </b>17 डिसेंबर 2024 <br/> 
+        </Typography>
+        <Typography variant="h5" paragraph>
+          विवाह समारंभ - 22 डिसेंबर 2024 <br /> सायंकाळी ५.५६ वा
+        </Typography>
+        <Typography variant="body4">
+          <b>सत्यनारायण पूजा - </b>
+          22 डिसेंबर 2024 : दुपारी 3 वा 
         </Typography>
       </Box>
     </section>

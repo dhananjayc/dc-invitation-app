@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Box, IconButton, Modal } from '@mui/material';
+import { Box, IconButton, Modal, useMediaQuery } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CloseIcon from '@mui/icons-material/Close';
+import { useTheme } from '@mui/material/styles';
 
 
 const galleryMedia = [
@@ -20,12 +21,19 @@ const galleryMedia = [
   { type: 'video', src: '/assets/InviteVideo4.mp4' },
 ];
 
-const itemsPerPage = 3;  // Number of items to display at once
+// const itemsPerPage = 3;  // Number of items to display at once
 
 const CarouselGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);  // Starting index of visible items
   const [open, setOpen] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState(null);
+  // Access the theme object
+  const theme = useTheme();
+  // Use Media Query to detect small screen (sm)
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('xs'));
+
+  // Dynamically set items per page based on screen size
+  const itemsPerPage = isSmallScreen ? 2 : 2; // Number of items to display at once
 
   const handleOpen = (media) => {
     setSelectedMedia(media);
@@ -59,7 +67,7 @@ const CarouselGallery = () => {
       <h2>Our Gallery and Memories</h2>
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         {/* Previous Arrow */}
-        <IconButton onClick={prevItems} sx={{ marginRight: 2 }}>
+        <IconButton onClick={prevItems} sx={{ marginRight: 2, width: '5%' }}>
           <ArrowBackIosIcon />
         </IconButton>
 
@@ -70,11 +78,11 @@ const CarouselGallery = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             overflowX: 'hidden', // Hide overflow for smooth scrolling
-            width: '80%',        // Width of the visible media area
+            width: '100%',        // Width of the visible media area
           }}
         >
           {visibleItems.map((media, index) => (
-            <Box key={index} sx={{ flex: '1 0 30%', margin: '0 10px' }}>  {/* Adjusting item width */}
+            <Box key={index} sx={{ flex: '1 0 40%', margin: '0 8px' }}>  {/* Adjusting item width */}
               {media.type === 'image' ? (
                 <img
                   src={media.src}
@@ -96,7 +104,7 @@ const CarouselGallery = () => {
         </Box>
 
         {/* Next Arrow */}
-        <IconButton onClick={nextItems} sx={{ marginLeft: 2 }}>
+        <IconButton onClick={nextItems} sx={{ marginLeft: 2, width: '5%' }}>
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>

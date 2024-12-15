@@ -15,6 +15,10 @@ const Location = () => {
         <Typography variant="h6" paragraph>
           Matoshree Lawns, Mohitewadi, Tal. Khed, Dist. Pune
         </Typography>
+        <Typography variant="h5" paragraph>
+        मातोश्री लॉन्स, मोहितेवाडी, ता. खेड, जि. पुणे
+        </Typography>
+
         <Button
           variant="outlined"
           color="primary"
