@@ -1,0 +1,46 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2, h3, h4 {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+ul li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.our-story {
+  background-image: url('../public/assets/Invite.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+
+.map-location > iframe {
+  border: 0;
+}
+
