@@ -10,7 +10,7 @@ const Navbar = () => {
           flexDirection: 'row', // Column layout for XS, row for larger screens
           alignItems: { xs: 'center', sm: 'flex-start' },
           justifyContent: 'space-between',
-          flexWrap: 'wrap', // Allow buttons to wrap on smaller screens
+          // flexWrap: 'wrap', // Allow buttons to wrap on smaller screens
         }}
       >
         {/* Responsive Typography for the title */}
@@ -18,7 +18,7 @@ const Navbar = () => {
           variant="h3"
           sx={{
             fontSize: {
-              xs: '1.5rem', // Smaller font for XS screens
+              xs: '0.8rem', // Smaller font for XS screens
               sm: '1.5rem',
               md: '1.5rem',
             },
@@ -39,6 +39,7 @@ const Navbar = () => {
             flexDirection: 'row', // Stack buttons vertically on XS, row on sm+
             width: { xs: '100%', sm: 'auto' }, // Full width buttons on XS screens
             alignItems: 'center',
+            overflowX: 'scroll',
           }}
         >
           <Button
