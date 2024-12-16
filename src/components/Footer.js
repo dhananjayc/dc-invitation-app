@@ -14,6 +14,10 @@ const Footer = () => {
             www.kavyasaanj.com
           </Link>
         </Typography>
+        <Typography variant="body1"> <br/ >
+          The wedding ceremony will take place at: <br/ >
+          Matoshree Lawns, Mohitewadi, Tal. Khed, Dist. Pune <br/>
+        </Typography>
       </Box>
     </footer>
   );
