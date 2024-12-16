@@ -15,7 +15,7 @@ const EventDetails = () => {
           Location: Matoshree Lawns, Mohitewadi, Khed, Pune
         </Typography> */}
         <Typography variant="body4">
-          <b>दंडवत - </b>19 डिसेंबर 2024 (सकाळी 9 वा. चिंचोशी)<br/> 
+          <b>दंडवत - </b>19 डिसेंबर 2024 (सायंकाळी 4 वा. चिंचोशी)<br/> 
         </Typography>
         <Typography variant="h5" paragraph>
           विवाह समारंभ - 20 डिसेंबर 2024 <br /> सायंकाळी 5.56 वा (मातोश्री लॉन्स)
