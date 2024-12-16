@@ -17,7 +17,7 @@ const Header = () => {
         <Typography variant="body1" gutterBottom>
           Matoshree Lawns, Mohitewadi, Khed, Pune
         </Typography>
-        <Button variant="contained" color="primary" size="large" href="#location">
+        <Button variant="contained" color="primary" size="large" href="https://www.kavyasaanj.com">
           Save the Date
         </Button>
       </Box>
